@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29403.142
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "OnlineEducationPlatformWebAPI\API.csproj", "{93479CD2-AFC4-4DD1-A4E1-BF49AEF3BA4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbLayer", "DbLayer\DbLayer.csproj", "{79D00F31-F1F6-4D01-B246-5635639513FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93479CD2-AFC4-4DD1-A4E1-BF49AEF3BA4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93479CD2-AFC4-4DD1-A4E1-BF49AEF3BA4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93479CD2-AFC4-4DD1-A4E1-BF49AEF3BA4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93479CD2-AFC4-4DD1-A4E1-BF49AEF3BA4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79D00F31-F1F6-4D01-B246-5635639513FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79D00F31-F1F6-4D01-B246-5635639513FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79D00F31-F1F6-4D01-B246-5635639513FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79D00F31-F1F6-4D01-B246-5635639513FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD7BD3EA-A350-4799-AF62-43B7D8BE3BE6}
+	EndGlobalSection
+EndGlobal
