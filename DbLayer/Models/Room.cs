@@ -10,6 +10,6 @@ namespace DbLayer.Models
         public string Name { get; set; }
 
         public Folder Folder { get; set; }
-        public ICollection<RoomUser> RoomUsers { get; set; }
+        public List<RoomUser> RoomUsers { get; set; }
     }
 }

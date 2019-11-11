@@ -9,6 +9,6 @@ namespace DbLayer.Models
         public int Id { get; set; }
         public int Value { get; set; }
 
-        public ICollection<Response> Responses { get; set; }
+        public List<Response> Responses { get; set; }
     }
 }

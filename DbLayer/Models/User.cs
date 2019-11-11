@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace DbLayer.Models
@@ -13,13 +14,18 @@ namespace DbLayer.Models
         public string Password { get; set; }
         public bool Online { get; set; }
 
-        public File Photo { get; set; }
-        public ICollection<RoomUser> RoomUsers { get; set; }
-        public ICollection<Suggestion> Suggestions { get; set; }
-        public ICollection<Notification> Notifications { get; set; }
-        public ICollection<File> Files { get; set; }
-        public ICollection<Response> Responses { get; set; }
-        public ICollection<Assignment> Assignments { get; set; }
+        public Photo Photo { get; set; }
+        public List<RoomUser> RoomUsers { get; set; }
+
+        [InverseProperty("Owner")]
+        public List<Suggestion> SuggestionsGot { get; set; }
+
+        [InverseProperty("Sender")]
+        public List<Suggestion> SuggestionsMade { get; set; }
+        public List<Notification> Notifications { get; set; }
+        public List<File> Files { get; set; }
+        public List<Response> Responses { get; set; }
+        public List<Assignment> Assignments { get; set; }
 
         public Role Role { get; set; }
     }

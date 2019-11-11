@@ -9,6 +9,6 @@ namespace DbLayer.Models
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public ICollection<RoomUser> RoomUsers { get; set; }
+        public List<RoomUser> RoomUsers { get; set; }
     }
 }

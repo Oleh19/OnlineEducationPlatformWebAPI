@@ -15,6 +15,6 @@ namespace DbLayer.Models
         public Room Room { get; set; }
         public User User { get; set; }
         public File File { get; set; }
-        public ICollection<Response> Responses { get; set; }
+        public List<Response> Responses { get; set; }
     }
 }
