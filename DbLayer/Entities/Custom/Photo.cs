@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DbLayer.Models
+namespace DbLayer.Entities.Custom
 {
-    public class Photo
+    public class Photo : BaseEntity
     {
-        public int Id { get; set; }
         public string Path { get; set; }
 
 

@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29403.142
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "OnlineEducationPlatformWebAPI\API.csproj", "{93479CD2-AFC4-4DD1-A4E1-BF49AEF3BA4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbLayer", "DbLayer\DbLayer.csproj", "{79D00F31-F1F6-4D01-B246-5635639513FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbLayer", "DbLayer\DbLayer.csproj", "{79D00F31-F1F6-4D01-B246-5635639513FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{D7086BC6-C4D9-467C-A290-CD0D9E128180}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{79D00F31-F1F6-4D01-B246-5635639513FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79D00F31-F1F6-4D01-B246-5635639513FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79D00F31-F1F6-4D01-B246-5635639513FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7086BC6-C4D9-467C-A290-CD0D9E128180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7086BC6-C4D9-467C-A290-CD0D9E128180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7086BC6-C4D9-467C-A290-CD0D9E128180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7086BC6-C4D9-467C-A290-CD0D9E128180}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

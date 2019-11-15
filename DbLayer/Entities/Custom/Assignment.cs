@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DbLayer.Models
+namespace DbLayer.Entities.Custom
 {
-    public class Assignment
+    public class Assignment : BaseEntity
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public DateTime CreationDate { get; set; }
         public DateTime EndingDate { get; set; }
 
         public Room Room { get; set; }

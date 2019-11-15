@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DbLayer.Models
+namespace DbLayer.Entities.Custom
 {
-    public class Notification
+    public class Notification : BaseEntity
     {
-        public int Id { get; set; }
         public string Description { get; set; }
         public bool Read { get; set; }
 

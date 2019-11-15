@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DbLayer.Models
+namespace DbLayer.Entities.Custom
 {
-    public class Mark
+    public class Mark : BaseEntity
     {
-        public int Id { get; set; }
         public int Value { get; set; }
 
         public List<Response> Responses { get; set; }

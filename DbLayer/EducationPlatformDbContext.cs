@@ -1,4 +1,4 @@
-﻿using DbLayer.Models;
+﻿using DbLayer.Entities.Custom;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -26,10 +26,10 @@ namespace DbLayer
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            #region Adding of a composite key to RoomUser entity and configuring many-to-many relationship between entities Room and User
+            #region (Adding of a composite key to RoomUser entity and) ??? configuring many-to-many relationship between entities Room and User
 
-            modelBuilder.Entity<RoomUser>()
-                .HasKey(rm => new { rm.RoomId, rm.UserId });
+            //modelBuilder.Entity<RoomUser>()
+            //    .HasKey(rm => new { rm.RoomId, rm.UserId });
 
             modelBuilder.Entity<RoomUser>()
                 .HasOne(rm => rm.Room)

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DbLayer.Models
+namespace DbLayer.Entities.Custom
 {
-    public class RoomUser
+    public class RoomUser : BaseEntity
     {
         public int RoomId { get; set; }
         public int UserId { get; set; }
