@@ -10,7 +10,7 @@ namespace DbLayer.Entities.Custom
 
         public Assignment Assignment { get; set; }
         public User User { get; set; }
-        public File File { get; set; }
+        public FileInstance File { get; set; }
         public Mark Mark { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace DbLayer
     public class EducationPlatformDbContext : DbContext
     {
         public DbSet<Assignment> Assignments { get; set; }
-        public DbSet<File> Files { get; set; }
+        public DbSet<FileInstance> Files { get; set; }
         public DbSet<Folder> Folders { get; set; }
         public DbSet<Mark> Marks { get; set; }
         public DbSet<Notification> Notifications { get; set; }

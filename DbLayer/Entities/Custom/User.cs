@@ -22,7 +22,7 @@ namespace DbLayer.Entities.Custom
         [InverseProperty("Sender")]
         public List<Suggestion> SuggestionsMade { get; set; }
         public List<Notification> Notifications { get; set; }
-        public List<File> Files { get; set; }
+        public List<FileInstance> Files { get; set; }
         public List<Response> Responses { get; set; }
         public List<Assignment> Assignments { get; set; }
 

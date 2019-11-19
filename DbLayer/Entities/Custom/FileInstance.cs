@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DbLayer.Entities.Custom
 {
-    public class File : BaseEntity
+    public class FileInstance : BaseEntity
     {
         public string Path { get; set; }
 

@@ -8,7 +8,7 @@ namespace DbLayer.Entities.Custom
     {
         public string Path { get; set; }
 
-        public List<File> Files { get; set; }
+        public List<FileInstance> Files { get; set; }
         public int RoomId { get; set; }
         public Room Room { get; set; }
     }

@@ -12,7 +12,7 @@ namespace DbLayer.Entities.Custom
 
         public Room Room { get; set; }
         public User User { get; set; }
-        public File File { get; set; }
+        public FileInstance File { get; set; }
         public List<Response> Responses { get; set; }
     }
 }
