@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DbLayer.Entities.Custom
 {
-    public class Suggestion : BaseEntity
+    public class Invitation : BaseEntity
     {
         public User Owner { get; set; }
         public User Sender { get; set; }

@@ -6,7 +6,7 @@ namespace DbLayer.Entities.Custom
 {
     public class Notification : BaseEntity
     {
-        public string Description { get; set; }
+        public string Text { get; set; }
         public bool Read { get; set; }
 
         public User Owner { get; set; }

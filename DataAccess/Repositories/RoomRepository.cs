@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DataAccess.Repositories
 {
-    public class RoomRepository : EFAsyncRepository<Room>
+    public class RoomRepository : GenericAsyncRepository<Room>
     {
         public RoomRepository(EducationPlatformDbContext context) : base(context) { }
     }

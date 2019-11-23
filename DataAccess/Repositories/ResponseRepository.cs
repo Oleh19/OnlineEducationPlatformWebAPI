@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DataAccess.Repositories
 {
-    public class ResponseRepository : EFAsyncRepository<Response>
+    public class ResponseRepository : GenericAsyncRepository<Response>
     {
         public ResponseRepository(EducationPlatformDbContext context) : base(context) { }
     }

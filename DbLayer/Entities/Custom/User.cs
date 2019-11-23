@@ -17,14 +17,14 @@ namespace DbLayer.Entities.Custom
         public List<RoomUser> RoomUsers { get; set; }
 
         [InverseProperty("Owner")]
-        public List<Suggestion> SuggestionsGot { get; set; }
+        public List<Invitation> InvitationsGot { get; set; }
 
         [InverseProperty("Sender")]
-        public List<Suggestion> SuggestionsMade { get; set; }
+        public List<Invitation> InvitationsMade { get; set; }
         public List<Notification> Notifications { get; set; }
-        public List<FileInstance> Files { get; set; }
-        public List<Response> Responses { get; set; }
-        public List<Assignment> Assignments { get; set; }
+        public List<FileInstance> FilesCreated { get; set; }
+        public List<Response> ResponsesMade { get; set; }
+        public List<Assignment> AssignmentsCreated { get; set; }
 
         public Role Role { get; set; }
     }

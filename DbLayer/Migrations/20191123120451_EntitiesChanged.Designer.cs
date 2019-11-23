@@ -4,14 +4,16 @@ using DbLayer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DbLayer.Migrations
 {
     [DbContext(typeof(EducationPlatformDbContext))]
-    partial class EducationPlatformDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191123120451_EntitiesChanged")]
+    partial class EntitiesChanged
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -124,39 +126,6 @@ namespace DbLayer.Migrations
                         .IsUnique();
 
                     b.ToTable("Folders");
-                });
-
-            modelBuilder.Entity("DbLayer.Entities.Custom.Invitation", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("ModifiedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int?>("OwnerId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("RoomId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("SenderId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("OwnerId");
-
-                    b.HasIndex("RoomId");
-
-                    b.HasIndex("SenderId");
-
-                    b.ToTable("Invitations");
                 });
 
             modelBuilder.Entity("DbLayer.Entities.Custom.Mark", b =>
@@ -373,6 +342,39 @@ namespace DbLayer.Migrations
                     b.ToTable("RoomUsers");
                 });
 
+            modelBuilder.Entity("DbLayer.Entities.Custom.Suggestion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("OwnerId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("RoomId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("SenderId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OwnerId");
+
+                    b.HasIndex("RoomId");
+
+                    b.HasIndex("SenderId");
+
+                    b.ToTable("Suggestions");
+                });
+
             modelBuilder.Entity("DbLayer.Entities.Custom.User", b =>
                 {
                     b.Property<int>("Id")
@@ -418,7 +420,7 @@ namespace DbLayer.Migrations
                         .HasForeignKey("RoomId");
 
                     b.HasOne("DbLayer.Entities.Custom.User", "User")
-                        .WithMany("AssignmentsCreated")
+                        .WithMany("Assignments")
                         .HasForeignKey("UserId");
                 });
 
@@ -431,7 +433,7 @@ namespace DbLayer.Migrations
                         .IsRequired();
 
                     b.HasOne("DbLayer.Entities.Custom.User", "CreatedBy")
-                        .WithMany("FilesCreated")
+                        .WithMany("Files")
                         .HasForeignKey("CreatedById");
 
                     b.HasOne("DbLayer.Entities.Custom.Folder", "Folder")
@@ -452,21 +454,6 @@ namespace DbLayer.Migrations
                         .HasForeignKey("DbLayer.Entities.Custom.Folder", "RoomId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("DbLayer.Entities.Custom.Invitation", b =>
-                {
-                    b.HasOne("DbLayer.Entities.Custom.User", "Owner")
-                        .WithMany("InvitationsGot")
-                        .HasForeignKey("OwnerId");
-
-                    b.HasOne("DbLayer.Entities.Custom.Room", "Room")
-                        .WithMany()
-                        .HasForeignKey("RoomId");
-
-                    b.HasOne("DbLayer.Entities.Custom.User", "Sender")
-                        .WithMany("InvitationsMade")
-                        .HasForeignKey("SenderId");
                 });
 
             modelBuilder.Entity("DbLayer.Entities.Custom.Notification", b =>
@@ -500,7 +487,7 @@ namespace DbLayer.Migrations
                         .HasForeignKey("MarkId");
 
                     b.HasOne("DbLayer.Entities.Custom.User", "User")
-                        .WithMany("ResponsesMade")
+                        .WithMany("Responses")
                         .HasForeignKey("UserId");
                 });
 
@@ -521,6 +508,21 @@ namespace DbLayer.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("DbLayer.Entities.Custom.Suggestion", b =>
+                {
+                    b.HasOne("DbLayer.Entities.Custom.User", "Owner")
+                        .WithMany("SuggestionsGot")
+                        .HasForeignKey("OwnerId");
+
+                    b.HasOne("DbLayer.Entities.Custom.Room", "Room")
+                        .WithMany()
+                        .HasForeignKey("RoomId");
+
+                    b.HasOne("DbLayer.Entities.Custom.User", "Sender")
+                        .WithMany("SuggestionsMade")
+                        .HasForeignKey("SenderId");
                 });
 
             modelBuilder.Entity("DbLayer.Entities.Custom.User", b =>

@@ -19,7 +19,7 @@ namespace DbLayer
         public DbSet<RoleInRoom> RolesInRoom { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<RoomUser> RoomUsers { get; set; }
-        public DbSet<Suggestion> Suggestions { get; set; }
+        public DbSet<Invitation> Invitations { get; set; }
         public DbSet<User> Users { get; set; }
 
         public EducationPlatformDbContext(DbContextOptions<EducationPlatformDbContext> options) : base(options) { }

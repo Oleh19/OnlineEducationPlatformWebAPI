@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DataAccess.Repositories
 {
-    public class NotificationRepository : EFAsyncRepository<Notification>
+    public class NotificationRepository : GenericAsyncRepository<Notification>
     {
         public NotificationRepository(EducationPlatformDbContext context) : base(context) { }
     }

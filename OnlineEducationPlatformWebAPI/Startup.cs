@@ -28,6 +28,7 @@ namespace OnlineEducationPlatformWebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
             services.AddDbContext<EducationPlatformDbContext>(options =>
            options.UseSqlServer(Configuration.GetConnectionString("EducationPlatformDb")));
         }

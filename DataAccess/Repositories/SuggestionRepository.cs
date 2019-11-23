@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DataAccess.Repositories
 {
-    public class SuggestionRepository : EFAsyncRepository<Suggestion>
+    public class SuggestionRepository : GenericAsyncRepository<Invitation>
     {
         public SuggestionRepository(EducationPlatformDbContext context) : base(context) { }
     }

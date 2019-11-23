@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    public interface IAsyncRepository<T> where T : BaseEntity
+    public interface IAsyncRepository<Entity> where Entity : BaseEntity
     {
-        Task<IEnumerable<T>> GetAllAsync();
-        Task<IEnumerable<T>> GetWhereAsync(Expression<Func<T, bool>> predicate);
+        Task<IEnumerable<Entity>> GetAllAsync();
+        Task<IEnumerable<Entity>> GetWhereAsync(Expression<Func<Entity, bool>> predicate);
 
-        Task<T> GetByIdAsync(int id);
-        Task<T> GetFirstOrDefaultAsync(Expression<Func<T, bool>> predicate);
+        Task<Entity> GetByIdAsync(int id);
+        Task<Entity> GetFirstOrDefaultAsync(Expression<Func<Entity, bool>> predicate);
 
         Task<int> CountAllAsync();
-        Task<int> CountWhereAsync(Expression<Func<T, bool>> predicate);
+        Task<int> CountWhereAsync(Expression<Func<Entity, bool>> predicate);
 
-        void Add(T entity);
-        void Update(T entity);
-        void Remove(T entity);
+        void Add(Entity entity);
+        void Update(Entity entity);
+        void Remove(Entity entity);
         Task SaveChangesAsync();
 
     }

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DataAccess.Repositories
 {
-    public class PhotoRepository : EFAsyncRepository<Photo>
+    public class PhotoRepository : GenericAsyncRepository<Photo>
     {
         public PhotoRepository(EducationPlatformDbContext context) : base(context) { }
     }

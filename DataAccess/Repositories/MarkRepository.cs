@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DataAccess.Repositories
 {
-    public class MarkRepository : EFAsyncRepository<Mark>
+    public class MarkRepository : GenericAsyncRepository<Mark>
     {
         public MarkRepository(EducationPlatformDbContext context) : base(context) { }
     }

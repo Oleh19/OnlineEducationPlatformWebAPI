@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DataAccess.Repositories
 {
-    public class FileInstanceRepository : EFAsyncRepository<FileInstance>
+    public class FileInstanceRepository : GenericAsyncRepository<FileInstance>
     {
         public FileInstanceRepository(EducationPlatformDbContext context) : base(context) { }
     }

@@ -4,14 +4,16 @@ using DbLayer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DbLayer.Migrations
 {
     [DbContext(typeof(EducationPlatformDbContext))]
-    partial class EducationPlatformDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191123203847_AFewEntitiesChanged")]
+    partial class AFewEntitiesChanged
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -418,7 +420,7 @@ namespace DbLayer.Migrations
                         .HasForeignKey("RoomId");
 
                     b.HasOne("DbLayer.Entities.Custom.User", "User")
-                        .WithMany("AssignmentsCreated")
+                        .WithMany("Assignments")
                         .HasForeignKey("UserId");
                 });
 
@@ -431,7 +433,7 @@ namespace DbLayer.Migrations
                         .IsRequired();
 
                     b.HasOne("DbLayer.Entities.Custom.User", "CreatedBy")
-                        .WithMany("FilesCreated")
+                        .WithMany("Files")
                         .HasForeignKey("CreatedById");
 
                     b.HasOne("DbLayer.Entities.Custom.Folder", "Folder")
@@ -500,7 +502,7 @@ namespace DbLayer.Migrations
                         .HasForeignKey("MarkId");
 
                     b.HasOne("DbLayer.Entities.Custom.User", "User")
-                        .WithMany("ResponsesMade")
+                        .WithMany("Responses")
                         .HasForeignKey("UserId");
                 });
 
