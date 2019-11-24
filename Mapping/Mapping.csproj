@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
-    <ProjectReference Include="..\DbLayer\DbLayer.csproj" />
+    <Folder Include="EntitiesDTO\" />
   </ItemGroup>
 
 </Project>
